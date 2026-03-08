@@ -9,7 +9,13 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollAnimations();
     initCounterAnimation();
     initSmoothScroll();
+    initCopyrightYear();
 });
+
+function initCopyrightYear() {
+    const yearEl = document.getElementById('currentYear');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+}
 
 /**
  * Navbar scroll effect - add/remove scrolled class
@@ -72,7 +78,7 @@ function initScrollAnimations() {
 
     // Add fade-in class to animatable elements
     const animateElements = document.querySelectorAll(
-        '.about-content, .about-visual, .timeline-item, .skill-category, .education-card, .contact-content'
+        '.about-content, .about-visual, .service-card, .experience-block, .project-card, .skill-category, .education-card, .contact-content'
     );
 
     animateElements.forEach((el, index) => {
