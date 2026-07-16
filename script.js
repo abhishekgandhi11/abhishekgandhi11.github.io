@@ -150,3 +150,21 @@ function initSmoothScroll() {
         });
     });
 }
+
+function createDeveloper({ name, role, stack, passion, location }) {
+    return {
+        name,
+        role,
+        stack,
+        passion,
+        location,
+    };
+}
+
+const developer = createDeveloper({
+    name: "Abhishek Gandhi",
+    role: "Senior Software Engineer",
+    stack: ["PHP", "Laravel", "JavaScript", "REST APIs"],
+    passion: "Building scalable solutions",
+    location: "India",
+});
